@@ -50,7 +50,7 @@ namespace hashtopus_hcdownloader
             if (File.Exists(tmpfile)) File.Delete(tmpfile);
             Console.WriteLine("Downloading 7z archive...");
             wcli.DownloadFile(domain + soubor, "hashcat.7z");
-            cosi = new Regex("hashcat-[0-9]*.[0-9]*");
+            cosi = new Regex("hashcat-[0-9]*.[0-9]*.[0-9]*");
             string rootdir = cosi.Match(soubor).Value;
 
             string[] soubory = new string[] { Path.Combine("OpenCL", "*"), "hashcat.hcstat", "hashcat.hctune", "hashcat32.bin", "hashcat32.exe", "hashcat64.bin", "hashcat64.exe" };
